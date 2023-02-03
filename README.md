@@ -35,9 +35,9 @@ For Windows, install Winpython (version 3.7.7.1), and Mac users install Anaconda
 Please refer to the manual for the installation.
 ```
 Links
-"Development of a model curriculum for mathematics data science, and AI education in medical and dental fields"(TMDU)
-https://www.tmd.ac.jp/labs/education/ds/
-"Japan Inter-University Consortium for Mathematics, Data Science and AI Education"
+"Development of a model curriculum for mathematics data science, and AI education in medical and dental fields"(TMDU)  
+https://www.tmd.ac.jp/labs/education/ds/. 
+"Japan Inter-University Consortium for Mathematics, Data Science and AI Education". 
 http://www.mi.u-tokyo.ac.jp/consortium/index.html
 ***
 # Workshop2022
@@ -72,8 +72,8 @@ Windowsの方はWinpython（バージョン3.7.7.1）、Macの方はAnaconda（p
 インストール方法についてマニュアルを参照して下さい。
 ```
 リンク
-東京医科歯科大学　医学・歯学分野における数理・データサイエンス・AI教育開発事業. 
+東京医科歯科大学　医学・歯学分野における数理・データサイエンス・AI教育開発事業  
 https://www.tmd.ac.jp/labs/education/ds/
 
-数理・データサイエンス・AI教育強化拠点コンソーシアム. 
+数理・データサイエンス・AI教育強化拠点コンソーシアム   
 http://www.mi.u-tokyo.ac.jp/consortium/index.html
