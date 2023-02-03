@@ -1,5 +1,5 @@
 # Workshop2022
-WorkShop held in November and December 2022
+WorkShop held in November and December 2022.
 
 The "Japan Inter-University Consortium for Mathematics, Data Science and AI Education", which established in 2017, is working to build and disseminate an educational system that allows students from all higher education institutions nationwide, regardless of the humanities and sciences, to learn mathematics, data science, and AI, and by 2021 it had expanded to more than 140 member schools.
 
