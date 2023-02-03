@@ -1,4 +1,4 @@
-# workshop2022
+# Workshop2022
 WorkShop held in November and December 2022
 
 The "Japan Inter-University Consortium for Mathematics, Data Science and AI Education", which established in 2017, is working to build and disseminate an educational system that allows students from all higher education institutions nationwide, regardless of the humanities and sciences, to learn mathematics, data science, and AI, and by 2021 it had expanded to more than 140 member schools.
@@ -6,7 +6,7 @@ The "Japan Inter-University Consortium for Mathematics, Data Science and AI Educ
 In addition, the "AI Strategy 2019" presented by the government in 2019 sets a goal of having about 500,000 people, equivalent to all university and technical college students for one year, acquire beginner-level mathematics, data science, and AI by 2025. Since 2020, Tokyo Medical and Dental University (TMDU) has been selected as the only cooperating institution in the medical and dental field of the consortium and is striving to spread and develop data science education in the medical field.
 
 This repository distributes materials of previous workshops and courses conducted by this project in TMDU.
-According to the license guidelines, the following materials can be used freely.
+According to the MIT license, the following materials can be used freely.
 If you have used the following materials in your classes at your educational institution, please be sure to answer the questionnaire on the first slide of each material.
 
 Materials
@@ -27,3 +27,16 @@ Materials
 　practice3: Machine learning with Iris data
 　practice4: Deep learning with Iris data
 　practice5: Deep learning with X-ray images of the lungs
+
+System requirement
+
+Both Windows and Mac are supported.
+For Windows, install Winpython (version 3.7.7.1), and Mac users install Anaconda (python3.7).
+Please refer to the manual for the installation.
+
+Links
+"Development of a model curriculum for mathematics data science, and AI education in medical and dental fields"(TMDU)
+https://www.tmd.ac.jp/labs/education/ds/
+"Japan Inter-University Consortium for Mathematics, Data Science and AI Education"
+http://www.mi.u-tokyo.ac.jp/consortium/index.html
+
