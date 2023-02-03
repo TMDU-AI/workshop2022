@@ -35,6 +35,7 @@ For Windows, install Winpython (version 3.7.7.1), and Mac users install Anaconda
 Please refer to the manual for the installation.
 ```
 Links
+
 "Development of a model curriculum for mathematics data science, and AI education in medical and dental fields"(TMDU)    
 https://www.tmd.ac.jp/labs/education/ds/
 
