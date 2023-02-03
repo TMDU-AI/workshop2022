@@ -8,7 +8,7 @@ In addition, the "AI Strategy 2019" presented by the government in 2019 sets a g
 This repository distributes materials of previous workshops and courses conducted by this project in TMDU.
 According to the MIT license, the following materials can be used freely.
 If you have used the following materials in your classes at your educational institution, please be sure to answer the questionnaire on the first slide of each material.
-
+```
 Materials. 
 1. Installation Manuals. 
 	Manual (1): WinPython. 
@@ -27,7 +27,7 @@ Materials.
 　practice3: Machine learning with Iris data. 
 　practice4: Deep learning with Iris data. 
 　practice5: Deep learning with X-ray images of the lungs. 
-
+```
 System requirement
 
 Both Windows and Mac are supported.
