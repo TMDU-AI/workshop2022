@@ -35,13 +35,14 @@ For Windows, install Winpython (version 3.7.7.1), and Mac users install Anaconda
 Please refer to the manual for the installation.
 ```
 Links
-"Development of a model curriculum for mathematics data science, and AI education in medical and dental fields"(TMDU)  
-https://www.tmd.ac.jp/labs/education/ds/. 
-"Japan Inter-University Consortium for Mathematics, Data Science and AI Education". 
+"Development of a model curriculum for mathematics data science, and AI education in medical and dental fields"(TMDU).   
+https://www.tmd.ac.jp/labs/education/ds/
+
+"Japan Inter-University Consortium for Mathematics, Data Science and AI Education"  
 http://www.mi.u-tokyo.ac.jp/consortium/index.html
 ***
 # Workshop2022
-2022年11月と12に開催されました
+2022年11月から12月にかけて開催されました
 
 2017年度より設立された「数理・データサイエンス・AI教育強化拠点コンソーシアム」では、文理を問わず全国すべての高等教育機関の学生が、数理・データサイエンス・AIを習得できるような教育体制の構築・普及を目指して活動しており、2021年には会員校140機関を超える規模にまで拡大しております。
 また2019年に政府が提示した「AI戦略2019」においては、2025年までに全ての大学・高専生の年間約50万人が初級レベルの数理・データサイエンス・AIを習得することを目標に掲げております。東京医科歯科大学は2020年度よりコンソーシアムの唯一の医学歯学分野における特定分野協力校に選定され、医療系分野におけるデータサイエンス教育の普及・展開に努めております。
