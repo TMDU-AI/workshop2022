@@ -9,23 +9,23 @@ This repository distributes materials of previous workshops and courses conducte
 According to the MIT license, the following materials can be used freely.
 If you have used the following materials in your classes at your educational institution, please be sure to answer the questionnaire on the first slide of each material.
 
-Materials
-1. Installation Manuals
-　Manual (1): WinPython
+Materials. 
+1. Installation Manuals. 
+　Manual (1): WinPython. 
 　Manual (2): Anaconda
 
-2. 2022 Medical DS Education Workshops
-    the content of the 3-part series of hands-on workshops for faculty and staff
-　Workshop1: Outline of the project, programming practice experience (1)
-　Workshop2: Programming practice experience (2)
+2. 2022 Medical DS Education Workshops. 
+    the content of the 3-part series of hands-on workshops for faculty and staff. 
+　Workshop1: Outline of the project, programming practice experience (1). 
+　Workshop2: Programming practice experience (2). 
 　Workshop3: Programming practice experience (3)
 
-3. "Introduction to AI and big data in health sciences"
-	the programming practice materials for first-year medical and dental students
-　practice1: Basic operations and data structures in Python
-　practice2: Basics of linear regression and logistic regression
-　practice3: Machine learning with Iris data
-　practice4: Deep learning with Iris data
+3. "Introduction to AI and big data in health sciences". 
+	the programming practice materials for first-year medical and dental students. 
+　practice1: Basic operations and data structures in Python. 
+　practice2: Basics of linear regression and logistic regression. 
+　practice3: Machine learning with Iris data. 
+　practice4: Deep learning with Iris data. 
 　practice5: Deep learning with X-ray images of the lungs
 
 System requirement
@@ -49,21 +49,21 @@ http://www.mi.u-tokyo.ac.jp/consortium/index.html
 MITライセンスに従って、教材は自由に使用することが出来ます。
 教材を授業等に使用した方は、必ず、各教材スライド1枚目のアンケートにご回答ください。
 
-構成
-１．インストールマニュアル【演習前に必ず自身のPCにインストールしてください】
-マニュアル1：WinPython
-マニュアル2：Anaconda
+構成. 
+１．インストールマニュアル【演習前に必ず自身のPCにインストールしてください】. 
+マニュアル1：WinPython. 
+マニュアル2：Anaconda. 
 
 ２．2022年度医療系DS教育ワークショップ資料【3回シリーズの演習体験内容です】
-　ワークショップ1回目：取り組みの概要、演習体験①
-　ワークショップ2回目：演習体験②
-　ワークショップ3回目：演習体験③
+　ワークショップ1回目：取り組みの概要、演習体験①. 
+　ワークショップ2回目：演習体験②. 
+　ワークショップ3回目：演習体験③. 
 
 ３．「医療とAI・ビッグデータ入門」教材【医学部・歯学部1年生対象の演習教材です】
-　1回目：pythonの基本操作とデータ構造
-　2回目：線形回帰、ロジスティック回帰
-　3回目：アヤメのデータによる機械学習
-　4回目：アヤメのデータによる深層学習
+　1回目：pythonの基本操作とデータ構造. 
+　2回目：線形回帰、ロジスティック回帰. 
+　3回目：アヤメのデータによる機械学習. 
+　4回目：アヤメのデータによる深層学習. 
 　5回目：肺のレントゲン画像による深層学習
 
 システム要件
@@ -72,8 +72,8 @@ Windowsの方はWinpython（バージョン3.7.7.1）、Macの方はAnaconda（p
 インストール方法についてマニュアルを参照して下さい。
 
 リンク
-東京医科歯科大学　医学・歯学分野における数理・データサイエンス・AI教育開発事業
+東京医科歯科大学　医学・歯学分野における数理・データサイエンス・AI教育開発事業. 
 https://www.tmd.ac.jp/labs/education/ds/
 
-数理・データサイエンス・AI教育強化拠点コンソーシアム
+数理・データサイエンス・AI教育強化拠点コンソーシアム. 
 http://www.mi.u-tokyo.ac.jp/consortium/index.html
