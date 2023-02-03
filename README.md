@@ -27,13 +27,13 @@ Materials.
 　practice3: Machine learning with Iris data. 
 　practice4: Deep learning with Iris data. 
 　practice5: Deep learning with X-ray images of the lungs. 
-```
+
 System requirement
 
 Both Windows and Mac are supported.
 For Windows, install Winpython (version 3.7.7.1), and Mac users install Anaconda (python3.7).
 Please refer to the manual for the installation.
-
+```
 Links
 "Development of a model curriculum for mathematics data science, and AI education in medical and dental fields"(TMDU)
 https://www.tmd.ac.jp/labs/education/ds/
@@ -48,7 +48,7 @@ http://www.mi.u-tokyo.ac.jp/consortium/index.html
 このリポジトリでは、本学が実施したワークショップおよび教材を公開しております。
 MITライセンスに従って、教材は自由に使用することが出来ます。
 教材を授業等に使用した方は、必ず、各教材スライド1枚目のアンケートにご回答ください。
-
+```
 構成. 
 １．インストールマニュアル【演習前に必ず自身のPCにインストールしてください】. 
 マニュアル1：WinPython. 
@@ -70,7 +70,7 @@ MITライセンスに従って、教材は自由に使用することが出来�
 WindowsもしくはMacを想定しております。
 Windowsの方はWinpython（バージョン3.7.7.1）、Macの方はAnaconda（python3.7）をインストールして頂きます。
 インストール方法についてマニュアルを参照して下さい。
-
+```
 リンク
 東京医科歯科大学　医学・歯学分野における数理・データサイエンス・AI教育開発事業. 
 https://www.tmd.ac.jp/labs/education/ds/
