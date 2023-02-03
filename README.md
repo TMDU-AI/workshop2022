@@ -11,8 +11,8 @@ If you have used the following materials in your classes at your educational ins
 
 Materials. 
 1. Installation Manuals. 
-　Manual (1): WinPython. 
-　Manual (2): Anaconda. 
+	Manual (1): WinPython. 
+	Manual (2): Anaconda. 
 
 2. 2022 Medical DS Education Workshops. 
     the content of the 3-part series of hands-on workshops for faculty and staff. 
