@@ -12,13 +12,13 @@ If you have used the following materials in your classes at your educational ins
 Materials. 
 1. Installation Manuals. 
 　Manual (1): WinPython. 
-　Manual (2): Anaconda
+　Manual (2): Anaconda. 
 
 2. 2022 Medical DS Education Workshops. 
     the content of the 3-part series of hands-on workshops for faculty and staff. 
 　Workshop1: Outline of the project, programming practice experience (1). 
 　Workshop2: Programming practice experience (2). 
-　Workshop3: Programming practice experience (3)
+　Workshop3: Programming practice experience (3). 
 
 3. "Introduction to AI and big data in health sciences". 
 	the programming practice materials for first-year medical and dental students. 
@@ -26,7 +26,7 @@ Materials.
 　practice2: Basics of linear regression and logistic regression. 
 　practice3: Machine learning with Iris data. 
 　practice4: Deep learning with Iris data. 
-　practice5: Deep learning with X-ray images of the lungs
+　practice5: Deep learning with X-ray images of the lungs. 
 
 System requirement
 
