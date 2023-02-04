@@ -1,0 +1,92 @@
+# 1)アイリスデータを読み込む
+
+# 前半部分
+
+# 必要なライブラリのインポート
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
+rcParams['font.family'] ='sans-serif'
+rcParams['font.sans-serif'] = ['Hiragino Maru Gothic Pro', 'Yu Gothic', 'Meirio']
+
+# 深層学習に用いるライブラリを取り込む
+from tensorflow.python.keras.models import Sequential
+from tensorflow.python.keras.layers import Dense
+
+# 以下のコード2行は本来必要ないが、anacondaでのOMP Abort エラーを防ぐために入れた
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
+# 後半部分
+
+# あやめデータの取得(学習用データ)
+
+iris_train2  = pd.read_csv('4-1.csv')
+print(iris_train2)
+iris_train  = pd.read_csv('4-1.csv').to_numpy()
+print(iris_train)
+x_train = iris_train[ : , 0:4].astype('float')
+y_train = iris_train[ : , 4:5].astype('int') 
+
+# あやめデータの取得(検証用データ)
+iris_test = pd.read_csv('4-2.csv').to_numpy()
+x_test = iris_test[ : , 0:4].astype('float') 
+y_test = iris_test[ : , 4:5].astype('int')
+
+# 2) 加工したデータの確認
+print(iris_train)
+print(x_train)
+print(y_train)
+print(iris_test)
+print(x_test)
+print(y_test)
+print(x_train.shape)
+print(y_train.shape)
+print(x_test.shape)
+print(y_test.shape)
+
+# 3)神経回路の作成
+dl_model = Sequential()
+dl_model.add(Dense(4, activation='relu', input_shape=(4,)))
+dl_model.add(Dense(4, activation='relu'))
+dl_model.add(Dense(4, activation='relu'))
+dl_model.add(Dense(1, activation='sigmoid'))
+dl_model.compile(loss='binary_crossentropy', optimizer='Adam', metrics=["accuracy"])
+dl_model.summary()
+
+# 4)学習用データでの学習
+
+history = dl_model.fit(x_train, y_train, epochs=300) 
+
+# 5) テスト用データでの検証(正解率の表示)
+
+score = dl_model.evaluate(x_test, y_test)
+print("Test loss:", score[0])
+print("Test accuracy:", score[1])
+
+
+# 6) 学習過程をグラフ表示する
+
+# Loss(正解との誤差)をloss_valuesに入れる
+loss_values = history.history['loss']
+
+# 正確度をaccに入れる
+acc = history.history['accuracy']
+
+# 1からepoch数までのリストを作る
+epochlist = range(1, len(loss_values) +1)
+
+#  Loss(正解との誤差)のグラフを作る
+# 'bo'は青点
+plt.plot(epochlist, loss_values, 'bo', label='Training loss')
+
+#  正確率のグラフを作る
+# 'b'は青い線
+plt.plot(epochlist, acc, 'b', label='Training accuracy')
+
+
+plt.title('学習回数と正確度')
+plt.ylabel('青線は正解率、青点は誤差')
+plt.xlabel('学習回数(epoch数)')
+plt.legend()
+plt.show()
