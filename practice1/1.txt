@@ -1,0 +1,169 @@
+# 1)変数と型
+
+x = 35
+data = 35
+print(x)
+print(data)
+data = 45
+print(data)
+data = "こんにちは"
+print(data)
+x = 35
+print(type(x))
+x2 = 3.5
+print(type(x2))
+data = "こんにちは"
+print(type(data))
+
+# 2)リストの作成
+
+x = [1,2,3,4,5]
+print(x)
+print(type(x))
+print(x[0])
+print(x[4])  
+
+# 3)numpy
+
+import numpy as np
+
+sample = np.array([1,2,3,4,5])
+print(sample)
+print(type(sample))
+
+t = sample * 2
+print(t)
+tt = sample + 2
+print(tt)
+
+a = np.arange(10)
+print(a)
+b = np.arange(1, 15, 2)
+print(b)
+
+c = np.array([[1,2,3],[4,5,6]])
+print(c)
+print(c.shape)
+
+d = c.reshape(3,2)
+print(d)
+print(d.shape)
+
+e = c.reshape(6,1)
+print(e)
+print(e.shape)
+
+f = np.zeros(10)
+print(f)
+g = np.zeros((3,4))
+print(g)
+
+h = np.ones(8)
+print(h)
+i = np.ones((4,2))
+print(i)
+
+# 4)pandas
+
+import pandas as pd
+
+df = pd.read_csv("1.csv")
+print(df)
+
+print(df['体重'])
+print(df[['体重','年齢']])
+
+print(df[0:2])
+a = df[1:4]
+print(a)
+
+# matplotlib
+# 5)散布図の作成
+
+# 作図のライブラリmatplotlibをインポートする
+# 以下、matplotlibのpyplotという機能をpltと省略して呼び出せる
+# 使うときはplt.～～とする
+import matplotlib.pyplot as plt
+
+# xに年齢、yに歯周病の歯の本数を代入
+x = [35 ,21 ,45 ,58 ,77]
+y = [3 ,0 ,6 ,8 ,13]
+
+# 図を作るという指示
+plt.figure()
+
+# x軸にx,y軸にyをプロットするという指示
+plt.scatter(x,y)
+
+# 上記内容を表示するという指示
+plt.show()
+
+
+# 6)散布図の作成（X軸とY軸の名前、タイトル、グリッド線の追加）
+
+import matplotlib.pyplot as plt
+x = [35 ,21 ,45 ,58 ,77]
+y = [3 ,0 ,6 ,8 ,13]
+plt.figure()
+
+# 図のタイトル
+plt.title('age and number of teeth affected by periodontitis')
+
+# x軸の名前(ラベル)
+plt.xlabel('age')
+
+# y軸の名前(ラベル)
+plt.ylabel('number of teeth affected by periodontitis')
+
+# グリッド線の追加
+plt.grid(True)
+
+plt.scatter(x,y)
+plt.show()
+
+
+# 7)散布図の作成（日本語を反映させるライブラリをインストール）
+
+import matplotlib.pyplot as plt
+
+# rcParamsという関数をインポートして日本語を反映させる
+from matplotlib import rcParams
+rcParams['font.family'] ='sans-serif'
+rcParams['font.sans-serif'] = ['Hiragino Maru Gothic Pro', 'Yu Gothic', 'Meirio']
+
+x = [35,21,45,58,77]
+y = [3,0,6,8,13]
+plt.figure()
+plt.title('年齢と歯周病の歯の本数')
+plt.xlabel('年齢')
+plt.ylabel('歯周病の歯の本数')
+plt.grid(True)
+plt.scatter(x,y)
+plt.show()
+
+# 8)折れ線の作成
+
+import matplotlib.pyplot as plt
+
+# rcParamsという関数をインポートして日本語を反映させる
+from matplotlib import rcParams
+rcParams['font.family'] ='sans-serif'
+rcParams['font.sans-serif'] = ['Hiragino Maru Gothic Pro', 'Yu Gothic', 'Meirio']
+
+x = [35,21,45,58,77]
+y = [3,0,6,8,13]
+plt.figure()
+plt.title('年齢と歯周病の歯の本数')
+plt.xlabel('年齢')
+plt.ylabel('歯周病の歯の本数')
+plt.grid(True)
+plt.plot(x,y)
+plt.show()
+
+
+
+
+
+
+
+
