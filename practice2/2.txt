@@ -1,0 +1,196 @@
+# 1)線形回帰分析
+
+from sklearn.linear_model import LinearRegression
+
+x = [[35],[21],[45],[58],[77]]
+y = [3,0,6,8,13]
+
+model = LinearRegression()
+
+model.fit(x,y)
+
+print(model.coef_)
+print(model.intercept_)
+
+test = [[88]]
+num_teeth = model.predict(test)
+print("88歳の時の本数は",num_teeth,"本")
+# 補足　Python3.7以降での一般的な書き方（フォーマット済み文字リテラルと言います。）
+print(f"88歳の時の本数は{num_teeth}本")
+
+# 2)回帰直線の作図
+
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
+rcParams['font.family'] ='sans-serif'
+rcParams['font.sans-serif'] = ['Hiragino Maru Gothic Pro', 'Yu Gothic', 'Meirio']
+
+x = [[35],[21],[45],[58],[77]]
+y = [3,0,6,8,13]
+
+model = LinearRegression()
+model.fit(x,y)
+
+print(model.coef_)
+print(model.intercept_)
+
+test = [[88]]
+num_teeth = model.predict(test)
+print("88歳の時の本数は",num_teeth,"本")
+
+plt.figure()
+plt.title('年齢と歯周病の歯の本数')
+plt.xlabel('年齢')
+plt.ylabel('歯周病の歯の本数')
+plt.grid(True)
+plt.scatter(x,y)
+
+plt.plot(x,model.predict(x))
+
+plt.show()
+
+# 3)回帰直線と予測した値の作図
+
+x = [[35],[21],[45],[58],[77]]
+y = [3,0,6,8,13]
+
+model = LinearRegression()
+model.fit(x,y)
+
+print(model.coef_)
+print(model.intercept_)
+
+test = [[88]]
+num_teeth = model.predict(test)
+print("88歳の時の本数は",num_teeth,"本")
+
+plt.figure()
+plt.title('年齢と歯周病の歯の本数')
+plt.xlabel('年齢')
+plt.ylabel('歯周病の歯の本数')
+plt.grid(True)
+plt.scatter(x,y)
+
+plt.plot(x,model.predict(x))
+plt.scatter(test,num_teeth)
+
+plt.show()
+
+
+# 4)アイリスデータを読み込む
+
+import pandas as pd
+import sklearn
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
+from sklearn import datasets
+from matplotlib import rcParams
+rcParams['font.family'] ='sans-serif'
+rcParams['font.sans-serif'] = ['Hiragino Maru Gothic Pro', 'Yu Gothic', 'Meirio']
+
+# pandasを用いて2.csvを読み込む
+# pd.read_csv('ファイル名', encoding='エンコード方式')
+# エンコードは文字コード(各文字に割り当てられた数字)を対応づける方式で、今回はutf-8というエンコード方式を選ぶ
+iris = pd.read_csv('2.csv', encoding='utf-8')
+print(iris)
+
+# 5) 学習に用いる説明変数と目的変数を設定する
+
+df = iris[0:100]
+x = df['がく片の長さ']
+y = df['アヤメの種類_数字']
+print(x)
+print(y)
+
+x = pd.DataFrame(df['がく片の長さ'])
+
+#6) ロジスティック回帰で学習させる
+
+model2 = LogisticRegression()
+model2.fit(x, y)
+
+print(model2.coef_)
+print(model2.intercept_)
+
+#7) 作った学習モデルで分類をする
+
+check1 = model2.predict([[4.5]])
+print(check1)
+check2 = model2.predict([[5.0]])
+print(check2)
+check3 = model2.predict([[7.0]])
+print(check3)
+
+check4 = model2.predict_proba([[4.5]])
+print(check4)
+check5 = model2.predict_proba([[5.0]])
+print(check5)
+check6 = model2.predict_proba([[7.0]])
+print(check6)
+
+#8) 説明変数を2つ使って分類する①
+
+x = pd.DataFrame(df[['がく片の長さ','がく片の幅']])
+y = df['アヤメの種類_数字']
+
+model2 = LogisticRegression()
+model2.fit(x, y)
+
+print(model2.coef_)
+print(model2.intercept_)
+
+#９) 説明変数を2つ使って分類する②
+
+check7 = model2.predict_proba([[4.5,3.2]])
+print(check7)
+
+check8 = model2.predict_proba([[5.0, 5.5]])
+print(check8)
+
+check9 = model2.predict_proba([[7.0, 6.0]])
+print(check9)
+
+#１０）ロジスティック関数を図示しよう①
+
+df = iris[0:100]
+X = df['がく片の長さ']
+y = df['アヤメの種類_数字']
+
+plt.scatter(X, y)
+plt.show()
+
+#１１）ロジスティック関数を図示しよう②
+
+df = iris[0:100]
+X = pd.DataFrame(df['がく片の長さ'])
+y = df['アヤメの種類']
+
+model2 = LogisticRegression()
+model2.fit(X, y)
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+X_test = np.linspace(X.min(), X.max(), 100)
+z = sigmoid(X_test * model2.coef_ + model2.intercept_)
+
+plt.scatter(X, y)
+plt.plot(X_test, z)
+plt.show()
+
+print(model2.coef_)
+print(model2.intercept_)
+
+# 12) 最後の確認
+print('最後の確認')
+print(4.5*model2.coef_ + model2.intercept_)
+print(sigmoid(4.5*model2.coef_ + model2.intercept_))
+
+print(5.0*model2.coef_ + model2.intercept_)
+print(sigmoid(5.0*model2.coef_ + model2.intercept_))
+
+print(7.0*model2.coef_ + model2.intercept_)
+print(sigmoid(7.0*model2.coef_ + model2.intercept_))
+
