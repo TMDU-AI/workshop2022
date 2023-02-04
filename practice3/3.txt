@@ -1,0 +1,127 @@
+# 新しいファイルを開いたら保存先を第三回のフォルダに指定しましょう
+# 1) 必要なライブラリの読み込みとiris.csvの読み込み
+import sklearn
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+from matplotlib import rcParams
+rcParams['font.family'] ='sans-serif'
+rcParams['font.sans-serif'] = ['Hiragino Maru Gothic Pro', 'Yu Gothic', 'Meirio']
+
+# iris.csvの読み込み
+iris = pd.read_csv("3.csv", encoding="utf-8")
+
+# 2) 前回の復習
+# 線形単回帰は１次直線で近似して連続変数yを予測する
+df = iris[0:100]
+print(df)
+x1 = df[['がく片の長さ']]
+y1 = df['がく片の幅']
+from sklearn.linear_model import LinearRegression
+model1 = LinearRegression()
+model1.fit(x1,y1)
+print("がく片の長さが6.5の時のがく片の幅")
+print(model1.predict([[6.5]]))
+
+# ロジスティック回帰はロジスティック関数で近似して(2値分類(0 or 1)を分類する
+df = iris[0:100]
+x2 = df[['がく片の長さ']]
+y2 = df['アヤメの種類(0,1,2)']
+from sklearn.linear_model import LogisticRegression
+model2 = LogisticRegression()
+model2.fit(x2, y2)
+print("がく片の長さが6.5の時の分類結果")
+print(model2.predict([[6.5]]))
+
+
+# 3) 全データを学習用と検証用に分割して学習①
+
+# ロジスティック回帰はロジスティック関数で近似して(2値分類(0 or 1)を分類する
+df = iris[0:100]
+x = df[['がく片の長さ']]
+y = df['アヤメの種類(0,1,2)']
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.3, random_state=0)
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+model.fit(x_train, y_train)
+
+# 4) 全データを学習用と検証用に分割して学習②
+
+print(x_test)
+print(y_test)
+print("テストデータの分類結果")
+print(model.predict(x_test))
+print("正解ラベル")
+print(np.array(y_test))
+
+# 5 )学習モデルの評価
+
+# モデル名.score(x,y)で正解率を計算
+print(model.score(x_test, y_test))
+
+#混同行列
+from sklearn.metrics import confusion_matrix
+conf = confusion_matrix(y_test, model.predict(x_test))
+print(conf)
+
+
+# 6) 決定木を実践してみよう
+
+# xに4つの特徴量(説明変数)、yに正解ラベル(目的変数)
+x2 = iris[['がく片の長さ','がく片の幅','花びらの長さ','花びらの幅']]
+y2 = iris['アヤメの種類']
+x2_train, x2_test, y2_train, y2_test = train_test_split(x2, y2, test_size = 0.3, random_state=0)
+# 決定木(max_depth=2)
+from sklearn import tree
+model2 = tree.DecisionTreeClassifier(max_depth=2, random_state=0)
+
+# model2.fit()でモデルの学習
+model2.fit(x2_train,y2_train)
+# model2.score()で学習済みモデルの正解率計算
+print('決定木')
+print(model2.predict(x2_test))
+print(model2.score(x2_test,y2_test))
+print(np.array(y2_test))
+
+conf2 = confusion_matrix(y2_test, model2.predict(x2_test))
+print(conf2)
+
+
+# 7)  決定木(max_depth=5)
+from sklearn import tree
+model3 = tree.DecisionTreeClassifier(max_depth=5, random_state=0)
+
+# model3.fit()でモデルの学習
+model3.fit(x2_train,y2_train)
+# model3.score()で学習済みモデルの正解率計算
+print(model3.predict(x2_test))
+print(model3.score(x2_test,y2_test))
+
+# 8) 決定木の図示
+
+x2 = iris[['がく片の長さ','がく片の幅','花びらの長さ','花びらの幅']]
+y2 = iris['アヤメの種類(0,1,2)']
+x2_train, x2_test, y2_train, y2_test = train_test_split(x2, y2, test_size = 0.3, random_state=0)
+model2 = tree.DecisionTreeClassifier(max_depth=2, random_state=0)
+model2.fit(x2_train,y2_train)
+
+plt.figure(figsize=(15,10))
+tree.plot_tree(model2)
+plt.show()
+
+
+# 9) そのほかの教師あり機械学習の実践(ランダムフォレスト)
+x = iris[['がく片の長さ','がく片の幅','花びらの長さ','花びらの幅']]
+y = iris['アヤメの種類']
+x4_train, x4_test, y4_train, y4_test = train_test_split(x, y, test_size = 0.3, random_state=0)
+
+from sklearn.ensemble import RandomForestClassifier
+model4 = RandomForestClassifier()
+# model4.fit()でモデルの学習
+# model4.score()で学習済みモデルの正解率計算
+model4.fit(x4_train,y4_train)
+print(model4.score(x4_test,y4_test))
+
+
+
